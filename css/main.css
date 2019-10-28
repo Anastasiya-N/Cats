@@ -1,0 +1,23 @@
+@import url("/css/header.css");
+@import url("/css/menu.css");
+@import url("/css/catalogue.css");
+@import url("/css/footer.css");
+
+
+@font-face {
+  font-family: "Geometria Medium";
+  src: url("/fonts/Geometria-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Geometria Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #171717;
+}

@@ -1,0 +1,59 @@
+.header {
+  max-width: 1140px;
+  height: 55px;
+  margin: 33px auto 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+.logo {
+  position: relative;
+  margin-left: 64px;
+  font-family: "Bad Script", cursive;
+  color: #171717;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.logo::before {
+  content: url(/img/icons/cat.png);
+  position: absolute;
+  left: -64px;
+  bottom: 0;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__address {
+  position: relative;
+  margin-right: 34px;
+  margin-left: 60px;
+}
+
+.contacts__address::after {
+  content: url(/img/icons/footstep.png);
+  position: absolute;
+  top: 0;
+  left: -38px;
+}
+
+.contacts__phone {
+  position: relative;
+  margin-right: 34px;
+  margin-left: 60px;
+}
+
+.contacts__phone::after {
+  content: url(/img/icons/footstep.png);
+  position: absolute;
+  top: 0;
+  left: -38px;
+}
+

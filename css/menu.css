@@ -1,0 +1,56 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 425px;
+  background-color: #413471;
+}
+
+.menu-list {
+  max-width: 1060px;
+}
+
+.menu-list__menu-item {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu-list__menu-item a {
+  text-decoration: none;
+  display: block;
+  padding: 16px 31px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.menu-list__menu-item a:hover {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.btn a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-right: 34px;
+  padding-left: 50px;
+  border-radius: 22px;
+  background-color: #6d5cad;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.btn a::after {
+  content: url(/img/icons/tel.png);
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  z-index: 1;
+}
+
+.btn a:hover {
+  border-radius: 22px;
+  background-color: #6d5cad;
+  background-image: linear-gradient(to left, #7ac398 0%, #01abce 100%);
+}

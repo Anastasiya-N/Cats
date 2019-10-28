@@ -1,0 +1,112 @@
+.catalogue__catalogue-title {
+    padding-top: 110px;
+    padding-bottom: 50px;
+    text-align: center;
+    /* margin: 0 auto; */
+font-size: 48px;
+line-height: 60px;
+position: relative;
+}
+
+.catalogue__catalogue-title::after {
+content: url(/img/icons/wavy_line.png);
+position: absolute;
+top: 155px;
+left: 50%;
+transform: translateX(-50%);
+
+}
+
+
+
+.gallery {
+  max-width: 1140px;
+  margin: 40px auto;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 25px;
+  grid-template-areas:
+    "p1 p2 p3"
+    "p4 p5 p3"
+    "p4 p6 p7";
+}
+
+.gallery__gallery-photo-1 {
+  grid-area: p1;
+}
+
+.gallery__gallery-photo-2 {
+  grid-area: p2;
+}
+
+.gallery__gallery-photo-3 {
+  grid-area: p3;
+}
+
+.gallery__gallery-photo-4 {
+  grid-area: p4;
+}
+
+.gallery__gallery-photo-5 {
+  grid-area: p5;
+}
+
+.gallery__gallery-photo-6 {
+  grid-area: p6;
+}
+
+.gallery__gallery-photo-7 {
+  grid-area: p7;
+}
+
+.gallery a {
+  position: relative;
+}
+
+.gallery__gallery-photo-1::before {
+  content: "Люси, 3 года";
+}
+
+.gallery__gallery-photo-2::before {
+  content: "Марта, 2 месяца";
+}
+
+.gallery__gallery-photo-3::before {
+  content: "Люси, 3 года";
+}
+
+.gallery__gallery-photo-4::before {
+  content: "Люси, 3 года";
+}
+
+.gallery__gallery-photo-5::before {
+  content: "Люси, 3 года";
+}
+
+.gallery__gallery-photo-6::before {
+  content: "Люси, 3 года";
+}
+
+.gallery__gallery-photo-7::before {
+  content: "Люси, 3 года";
+}
+
+.gallery a::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 5px;
+  padding-left: 18px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 24px;
+  background-color: #2d2d2d;
+  opacity: 0.75;
+}
+
+.gallery a:hover::before {
+  background-image: linear-gradient(to left, #7ac398 0%, #01abce 100%);
+  opacity: 1;
+}
