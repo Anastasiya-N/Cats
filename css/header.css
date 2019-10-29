@@ -57,3 +57,48 @@
   left: -38px;
 }
 
+@media (max-width: 770px) {
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* .logo::before {
+    content: url(/img/icons/cat.png);
+    position: absolute;
+    left: -64px;
+    bottom: 0;
+  } */
+  
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* .contacts__address {
+    position: relative;
+    margin-right: 34px;
+    margin-left: 60px;
+  } */
+  
+  /* .contacts__address::after {
+    content: url(/img/icons/footstep.png);
+    position: absolute;
+    top: 0;
+    left: -38px;
+  }
+  
+  .contacts__phone {
+    position: relative;
+    margin-right: 34px;
+    margin-left: 60px;
+  }
+  
+  .contacts__phone::after {
+    content: url(/img/icons/footstep.png);
+    position: absolute;
+    top: 0;
+    left: -38px;
+  } */
+}
