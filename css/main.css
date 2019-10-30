@@ -2,6 +2,7 @@
 @import url("/css/menu.css");
 @import url("/css/catalogue.css");
 @import url("/css/footer.css");
+@import url("/css/slider.css");
 
 
 @font-face {
@@ -12,12 +13,30 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+box-sizing: border-box;
+
   font-family: "Geometria Medium", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #171717;
 }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
