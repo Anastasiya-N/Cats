@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="/css/main.css" />
   <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="path/to/swiper.min.css">
   <title>Котик на час</title>
 </head>
 
@@ -72,34 +75,20 @@
   </nav>
 
   <section class="slider container">
-    <div class="slide-show">
 
-      <div class="slide-show__slide-photo">
-        <img src="/img/photos/slide_1.jpg" alt="slide_1">
-      </div>
-
-      <div class="slide-show__slide-photo">
-        <img src="/img/photos/slide_2.jpg" alt="slide_2">
-      </div>
-
-      <div class="slide-show__slide-photo">
-        <img src="/img/photos/slide_3.jpg" alt="slide_3">
-      </div>
-
-      <a class="slide-show__slide-prev" onclick="plusSlides(-1)">
-        <img src="/img/icons/next.png" alt="">
-      </a>
-      <a class="slide-show__slide-next" onclick="plusSlides(1)">
-        <img src="/img/icons/next.png" alt="">
-      </a>
-
-    </div>
-    <div class="slide-marker-block">
-      <span class="slide-marker-block__slide-marker" onclick="currentSlide(1)"></span>
-      <span class="slide-marker-block__slide-marker" onclick="currentSlide(2)"></span>
-      <span class="slide-marker-block__slide-marker" onclick="currentSlide(3)"></span>
-    </div>
-
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/img/photos/slide_1.jpg" alt="slide_1"></div>
+            <div class="swiper-slide"><img src="/img/photos/slide_2.jpg" alt="slide_2"></div>
+            <div class="swiper-slide"><img src="/img/photos/slide_3.jpg" alt="slide_3"></div>
+            
+          </div>
+         <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
   </section>
 
   <section class="catalogue">
@@ -154,40 +143,24 @@
 
   </script>
 
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="path/to/swiper.min.js"></script>
+
   <script>
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("slide-show__slide-photo");
-      var dots = document.getElementsByClassName("slide-marker-block__slide-marker");
-      if (n > slides.length) {
-        slideIndex = slides.length
-      }
-      if (n < 1) {
-        slideIndex = 1
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-
-  </script>
+      var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        effect: 'fade',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
 
 </body>
 
