@@ -34,7 +34,7 @@
 	height: 4px;
 	width: 20px;
 	position: absolute;
-	top: 50%;
+	top: 16px;
 	-webkit-transform: translateY(-50%);
 	        transform: translateY(-50%);
 	left: 30px;
@@ -45,16 +45,18 @@
 	content: "";
 	height: 4px;
 	width: 20px;
-	border-top: 4px solid #ededed;
+	background-color: #ededed;
+	/* border-top: 4px solid #ededed; */
 	position: absolute;
-	top: -8px;
+	top: 16px;
 }
 
 .menu__burger::before {
 	content: "";
 	height: 4px;
 	width: 20px;
-	border-top: 4px solid #ededed;
+	background-color: #ededed;
+	/* border-top: 4px solid #ededed; */
 	position: absolute;
 	top: 8px;
 }
@@ -246,6 +248,20 @@
 		cursor: pointer;
 		z-index: 5;
 	}
+
+	input.mobile-menu:checked ~ .mobile-menu >.menu__burger {
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	input.mobile-menu:checked ~ .mobile-menu >.menu__burger::after {
+		transform: rotate(45deg);
+		top: 8px;
+	}
+	input.mobile-menu:checked ~ .mobile-menu >.menu__burger::before {
+		transform: rotate(-45deg);
+		top: 8px;
+	}
+
 
 	.menu-list__menu-item:hover {
 		background-color: rgba(0, 0, 0, 0.45);
